@@ -1,14 +1,22 @@
-import React, { useState, useEffect, useCallback } from 'react';
-
-// ... (import statements)
+import React, { useState, useEffect, useCallback, useContext } from 'react';
+import { MyContext } from '../context/MyContext';
 
 const TicTacToe = () => {
-  const [board, setBoard] = useState(Array(9).fill(''));
-  const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [winner, setWinner] = useState(null);
-  const [winningLine, setWinningLine] = useState([]);
-  const [gameOver, setGameOver] = useState(false);
-  const [mode, setMode] = useState('player'); // Default mode is player vs player
+  const { gameState, makeMove, resetGame, setWinner  } = useContext(MyContext);
+
+  const {
+    board,
+    currentPlayer,
+    winner,
+    winningLine,
+    gameOver,
+    mode,
+    setBoard,
+    setCurrentPlayer,
+    setWinner: contextSetWinner,
+    setWinningLine,
+    setGameOver,
+  } = gameState;
 
   const winningPositions = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8],
@@ -44,20 +52,19 @@ const TicTacToe = () => {
       handleCellClick(availableMoves[randomIndex]);
     }
   };
+
   useEffect(() => {
     const winnerPlayer = checkWinner();
-    if (winnerPlayer) {
-      setWinner(winnerPlayer);
-      setGameOver(true);
-    } else if (isBoardFull()) {
-      setWinner('Draw');
-      setGameOver(true);
-    } else if (mode === 'computer' && currentPlayer === 'O') {
-      // Computer's turn
-      makeComputerMove();
-    }
-  }, [board, currentPlayer, gameOver, mode]);
-
+  if (winnerPlayer) {
+    contextsetWinner(winnerPlayer);
+    setGameOver(true);
+  } else if (isBoardFull()) {
+    contextsetWinner('Draw');
+    setGameOver(true);
+  } else if (mode === 'computer' && currentPlayer === 'O') {
+    makeComputerMove();
+  }
+}, [board, currentPlayer, gameOver, mode, makeComputerMove, setWinner, setGameOver]);
   const handleCellClick = useCallback(
     (index) => {
       if (gameOver || board[index]) return;
@@ -68,10 +75,10 @@ const TicTacToe = () => {
       setBoard(newBoard);
       setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
     },
-    [board, currentPlayer, gameOver]
+    [board, currentPlayer, gameOver, setBoard, setCurrentPlayer]
   );
 
-  const resetGame = () => {
+  const resetGameHandler = () => {
     setBoard(Array(9).fill(''));
     setCurrentPlayer('X');
     setWinner(null);
@@ -86,19 +93,11 @@ const TicTacToe = () => {
     } else if (board[index] === 'O') {
       cellContent = 'O';
     }
-  
+
     const isWinningCell = winner && winningLine.includes(index);
-  
+
     return (
-      <div
-        key={index}
-        className={`flex items-center justify-center`}
-        style={{
-          width: '110px', // Adjust the size as needed
-          height: '110px', // Adjust the size as needed
-          margin: '2px', // Add margin to separate cells
-        }}
-      >
+      <div key={index}>
         <button
           onClick={() => handleCellClick(index)}
           className={`w-full h-full border-2 border-gray-300 flex items-center justify-center focus:outline-none`}
@@ -112,18 +111,12 @@ const TicTacToe = () => {
           {cellContent}
         </button>
         {isWinningCell && (
-          <p className={`text-xl font-bold ${board[index] === 'X' ? 'text-pink-500' : 'text-yellow-500'}`}>
-           
-          </p>
+          <p className={`text-xl font-bold ${board[index] === 'X' ? 'text-pink-500' : 'text-yellow-500'}`}></p>
         )}
       </div>
     );
   };
-  
-  
-  
 
-  
   const getWinnerMessage = () => {
     if (winner) {
       let winnerText = `Winner is ${winner}!`;
@@ -145,7 +138,7 @@ const TicTacToe = () => {
             {winnerText} 🏆 Winner
           </p>
           <button
-            onClick={resetGame}
+            onClick={resetGameHandler}
             className="mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-md focus:outline-none"
           >
             Restart

@@ -49,5 +49,30 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-  ],
-}
+    
+        {
+          resolve: 'gatsby-plugin-firebase',
+          options: {
+            credentials: {
+              apiKey: 'YOUR_API_KEY',
+              authDomain: 'YOUR_AUTH_DOMAIN',
+              projectId: 'YOUR_PROJECT_ID',
+              storageBucket: 'YOUR_STORAGE_BUCKET',
+              messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+              appId: 'YOUR_APP_ID',
+              measurementId: 'YOUR_MEASUREMENT_ID',
+            },
+            features: {
+              auth: true, // enable Firebase authentication
+              database: true, // enable Firebase Realtime Database
+              storage: true, // enable Firebase Storage
+              messaging: true, // enable Firebase Cloud Messaging
+              functions: true, // enable Firebase Cloud Functions
+              performance: true, // enable Firebase Performance Monitoring
+            },
+          },
+        },
+      ],
+    }
+    
+  
