@@ -5,10 +5,13 @@ import Footer from '../components/Footer';
 
 const ContactPage = () => {
   return (
+    <div>
+      <Header/>
     <section className="contact">
-        < Header />
       <div className="content">
-        <h2>Contact Us</h2>
+        <br/><br/><br/><h2>Contact Us</h2>
+        <br/>  <br/>
+
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem numquam id reprehenderit, sunt laudantium enim possimus repellat debitis et quis!
         </p>
@@ -65,9 +68,12 @@ const ContactPage = () => {
             </div>
           </form>
         </div>
-        <Footer />
+       
       </div>
     </section>
+    <Footer/>
+    </div>
+
   );
 };
 

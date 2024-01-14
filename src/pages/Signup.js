@@ -2,6 +2,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Header from '../components/header';
+import Footer from '../components/Footer';
+
 
 // Define keyframe animation
 const animateBg = keyframes`
@@ -133,7 +135,10 @@ const Signup = () => {
           <div style={{ textAlign: 'center' }}>
             <h2 style={{ margin: 0 }}>Signup</h2>
           </div>
-  
+          <InputBox>
+           <Input type='text'  name='firstName' required/>
+           <Label>fullName</Label>
+           </InputBox>
             <InputBox>
               <Input type="email" required />
               <Label >Email</Label>
@@ -146,7 +151,7 @@ const Signup = () => {
 
             <InputBox>
               <Input type="password" required />
-              <Label> Rewrite Password </Label>
+              <Label> Confirm  Password </Label>
             </InputBox>
   
             <RememberForgot>
@@ -156,7 +161,7 @@ const Signup = () => {
               
             </RememberForgot>
   
-            <SubmitButton type="submit">Signup</SubmitButton>
+            <a href='/Form'><SubmitButton type="submit">Signup</SubmitButton></a>
   
             <RegisterLink>
               <RegisterLinkText>
@@ -166,6 +171,7 @@ const Signup = () => {
           </form>
         </LoginBox>
       </Wrapper>
+      <Footer/>
       </div>
     );
   };

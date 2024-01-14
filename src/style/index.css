@@ -21,7 +21,7 @@
     justify-content: center;
     background-color: var(--primary-color);
     border-radius: 15px 15px 0 0; /* Adjust border-radius */
-    padding: 20px; /* Add padding for better spacing */
+    padding: 40px; /* Add padding for better spacing */
   }
   
   .login-header p {

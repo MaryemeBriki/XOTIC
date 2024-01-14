@@ -5,7 +5,7 @@ import '../style/index.css';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 
-const Home = () => {
+const welecome = () => {
   return (
     <div>
       
@@ -18,7 +18,7 @@ const Home = () => {
             Welecome To Alumni you are know a member in our community.
             You can find some informations about the laureates of ENS.
             You can also contact with them thanks to the contact informations like emails or social media .
-            You can chose the sector you intersted about, follow this <Link to="/PhysiqueComponent">Link</Link>            
+            You can chose the sector you intersted about, follow this <Link to="/Branche">Link, Different Sector</Link>            
             
               
             </p>
@@ -31,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default welecome;

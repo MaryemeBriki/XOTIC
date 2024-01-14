@@ -1,0 +1,121 @@
+/* Form.css */
+
+
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: initial;
+  justify-content: initial;
+  padding: 20px;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.forma {
+  padding: 25px;
+  background: #ecf0f1;
+  max-width: 500px; /* Set a reasonable max-width */
+  width: 100%; /* Use percentage for responsiveness */
+  border-radius: 7px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  color: #2c3e50;
+}
+
+  
+  
+  .forma h2 {
+    font-size: 27px;
+    text-align: center;
+    margin: 0px 0 30px;
+  }
+  
+  .forma .forma-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .forma label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+  
+  .forma input,
+  .forma select {
+    height: 45px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #bfbfbf;
+  }
+  
+  .forma input:focus,
+  .forma select:focus {
+    border-color: #9a9a9a;
+  }
+  
+  .forma input.error,
+  .forma select.error {
+    border-color: #f91919;
+    background: #f9f0f1;
+  }
+  
+  .forma small {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    color: #f91919;
+  }
+  
+  .forma .password i {
+    position: absolute;
+    right: 0px;
+    height: 45px;
+    top: 28px;
+    font-size: 13px;
+    line-height: 45px;
+    width: 45px;
+    cursor: pointer;
+    color: #939393;
+    text-align: center;
+  }
+  
+  .submit-btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .submit-btn input {
+    color: #ffffff;
+    border: none;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #000000;
+    transition: background 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .submit-btn input:hover {
+    background: #1a1a1a;
+  }
+  
+  .submit-btn input:active {
+    transform: scale(0.95);
+  }
+  

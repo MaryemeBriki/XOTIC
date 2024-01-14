@@ -48,8 +48,8 @@ const FormComponent = () => {
  // ... (previous code)
 
 return (
-    <div main-container>
-      
+<div className="main-container">
+      <Header/>
       <form  className="forma" onSubmit={handleSubmit}>
         <h2>Form Validation</h2>
         <div className="forma-group fullname">
@@ -235,7 +235,7 @@ return (
 // ... (remaining code)
   
         <div className="forma-group submit-btn">
-          <input type="submit" value="Submit" />
+          <a href='/welecome'><input type="submit" value="Submit" /></a>
         </div>
       </form>
   

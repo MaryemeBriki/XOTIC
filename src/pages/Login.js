@@ -2,6 +2,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Header from '../components/header'; 
+import Footer from '../components/Footer';
+import { Link } from 'gatsby';
+
 
 // Define keyframe animation
 const animateBg = keyframes`
@@ -149,7 +152,7 @@ const Login = () => {
               <ForgotLink href="#">Forgot Password?</ForgotLink>
             </RememberForgot>
   
-            <SubmitButton type="submit">Login</SubmitButton>
+            <SubmitButton type="submit"><Link to = '/welecome'>Login</Link> </SubmitButton>
   
             <RegisterLink>
               <RegisterLinkText>
@@ -159,6 +162,7 @@ const Login = () => {
           </form>
         </LoginBox>
       </Wrapper>
+      <Footer />
       </div>
     );
   };
