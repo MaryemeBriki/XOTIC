@@ -1,0 +1,218 @@
+.colorful-backgrounds-5-icon {
+    object-fit: cover;
+  }
+  .bguni-2,
+  .colorful-backgrounds-5-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2988px;
+    height: 1278px;
+  }
+  .social-icons,
+  .social-icons1,
+  .social-icons2,
+  .social-icons3 {
+    position: absolute;
+    top: 66px;
+    left: 2863px;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+  }
+  .social-icons1,
+  .social-icons2,
+  .social-icons3 {
+    left: 2736px;
+  }
+  .social-icons2,
+  .social-icons3 {
+    left: 2609px;
+  }
+  .social-icons3 {
+    left: 2482px;
+  }
+  .best-developer {
+    color: #44bae8;
+  }
+  .copyright-best-container {
+    position: absolute;
+    top: 78px;
+    left: 61px;
+    font-weight: 800;
+  }
+  .footer {
+    position: absolute;
+    top: 1278px;
+    left: 0;
+    background-color: rgba(92, 32, 110, 0.88);
+    width: 2988px;
+    height: 179px;
+    overflow: hidden;
+    font-size: 36px;
+    color: var(--color-white);
+  }
+  .filliere-child {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    width: 419px;
+    height: 278px;
+    object-fit: cover;
+  }
+  .home {
+    position: absolute;
+    top: 26px;
+    left: 62px;
+  }
+  .home-,
+  .home-wrapper {
+    position: absolute;
+    top: 89px;
+    left: 441px;
+    background-color: var(--color-gray);
+    width: 238px;
+    height: 100px;
+    overflow: hidden;
+    text-align: left;
+    color: var(--color-plum);
+  }
+  .home-wrapper {
+    top: 85px;
+    left: 965px;
+  }
+  .islamique {
+    position: absolute;
+    top: 69px;
+    left: 108px;
+    font-weight: 500;
+    display: inline-block;
+    width: 876px;
+    height: 77px;
+  }
+  .islamique-wrapper {
+    position: absolute;
+    top: 301px;
+    left: 451px;
+    border-radius: var(--br-21xl);
+    background-color: var(--color-steelblue);
+    width: 1152px;
+    height: 198px;
+    overflow: hidden;
+  }
+  .home2 {
+    position: absolute;
+    top: 26px;
+    left: 62px;
+    white-space: pre-wrap;
+  }
+  .home-container {
+    position: absolute;
+    top: 89px;
+    left: 619px;
+    background-color: var(--color-gray);
+    width: 378px;
+    height: 100px;
+    overflow: hidden;
+    text-align: left;
+    color: var(--color-plum);
+  }
+  .histoire-geo-wrapper,
+  .mathematique-wrapper,
+  .physique-parent {
+    position: absolute;
+    top: 526px;
+    left: 451px;
+    border-radius: var(--br-21xl);
+    background-color: var(--color-steelblue);
+    width: 1152px;
+    height: 198px;
+    overflow: hidden;
+  }
+  .mathematique-wrapper,
+  .physique-parent {
+    left: 1711px;
+  }
+  .physique-parent {
+    top: 751px;
+  }
+  .les-langues {
+    position: absolute;
+    top: 60px;
+    left: 138px;
+    font-weight: 500;
+    display: inline-block;
+    width: 876px;
+    height: 77px;
+  }
+  .les-langues-wrapper,
+  .phylosophie-wrapper {
+    position: absolute;
+    top: 976px;
+    left: 1711px;
+    border-radius: var(--br-21xl);
+    background-color: var(--color-steelblue);
+    width: 1152px;
+    height: 198px;
+    overflow: hidden;
+  }
+  .phylosophie-wrapper {
+    top: 751px;
+    left: 451px;
+  }
+  .svt {
+    position: absolute;
+    top: 60px;
+    left: 215px;
+    font-weight: 500;
+    display: inline-block;
+    width: 722px;
+    height: 91px;
+  }
+  .informatique-wrapper,
+  .svt-wrapper {
+    position: absolute;
+    top: 976px;
+    left: 451px;
+    border-radius: var(--br-21xl);
+    background-color: var(--color-steelblue);
+    width: 1152px;
+    height: 198px;
+    overflow: hidden;
+  }
+  .informatique-wrapper {
+    top: 301px;
+    left: 1711px;
+    cursor: pointer;
+  }
+  .login {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    display: inline-block;
+    width: 171px;
+    height: 39px;
+  }
+  .filliere,
+  .login-wrapper {
+    background-color: var(--color-white);
+    overflow: hidden;
+  }
+  .login-wrapper {
+    position: absolute;
+    top: 85px;
+    left: 2695px;
+    width: 191px;
+    height: 69px;
+    color: var(--color-plum);
+  }
+  .filliere {
+    position: relative;
+    width: 100%;
+    height: 1444px;
+    text-align: center;
+    font-size: var(--font-size-21xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+  
